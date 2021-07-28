@@ -1,7 +1,8 @@
 # PHP-II Aug 2021
 
 ## TODO
-* Find `php.ini` directive pertaining to nesting level
+* Q: Is there a `php.ini` directive pertaining to nesting level?
+* A: See: https://stackoverflow.com/questions/4293775/increasing-nesting-function-calls-limit
 
 ## Homework
 * For Wed 28 Jul 2021
