@@ -37,12 +37,12 @@ class TestNest
 		return $out;
 	}
 }
-//ini_set('unserialize_max_depth', PHP_INT_MAX);
-//ini_set('xdebug.max_nesting_level', PHP_INT_MAX);
+ini_set('unserialize_max_depth', PHP_INT_MAX);
+ini_set('xdebug.max_nesting_level', PHP_INT_MAX);
 $test = new TestNest();
 try {
-//	$test->testArrayNest();
-	$test->testMethodNest();
+	$test->testArrayNest();
+//	$test->testMethodNest();
 } catch (Throwable $t) {
 	echo $t->getMessage() . "\n";
 }
