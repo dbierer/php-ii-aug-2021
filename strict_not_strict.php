@@ -44,7 +44,7 @@ var_dump($strict);
 try {
     $strict = new ExtendsStrict();
     $strict->setStatus(111);
-    $strict->setNum('999.99');
+    $strict->setNum(' 999.99');
     echo __LINE__ . ':' . WORKS_OK;
 } catch (Throwable $t) {
     echo __LINE__ . ':' . $t->getMessage() . "\n";
@@ -55,7 +55,7 @@ var_dump($strict);
 try {
     $strict = new ExtendsNotStrict();
     $strict->setStatus(111);
-    $strict->setNum('999.99');
+    $strict->setNum(' 999.99');
     echo __LINE__ . ':' . WORKS_OK;
 } catch (Throwable $t) {
     echo __LINE__ . ':' . $t->getMessage() . "\n";

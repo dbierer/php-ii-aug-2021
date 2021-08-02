@@ -5,8 +5,12 @@
 * Q: Example of strict_types in interface, abstract class and child class
   * Need to demonstrate exactly where does the declare() need to be executed?
   * Note: Typo3 uses it in all classes: is this necessary?
+* Q: Examples of well-structured but easy-to-follow code examples?
 
 ## Homework
+* For Wed 4 Aug 2021
+  * Lab: Build Custom Exception Class
+  * Lab: Traits
 * For Mon 2 Aug 2021
   * Lab: Abstract Classes
   * Lab: Interfaces
@@ -19,6 +23,10 @@
   * Lab: Namespace
   * Lab: Create a Class
 
+## Resources
+Examples of OOP
+* See: https://github.com/dbierer/classic_php_examples/tree/master/oop
+
 ## Class Notes
 * Predefined constants
   * https://www.php.net/manual/en/reserved.constants.php
@@ -29,6 +37,9 @@
 grep -rn /dir/path -e "SEARCH_ITEM"
 ```
 
+* Late Static Binding
+  * See: https://www.php.net/manual/en/language.oop5.late-static-bindings.php
+  
 ## Resources
 * https://github.com/dbierer/classic_php_examples
 * 
