@@ -1,7 +1,7 @@
 # PHP-II Aug 2021
 
 ## TODO
-* Q: Do you have a link to RFC for return data type of `self`?
+* Q: Do you have a link to RFC for return data type of `static`?
 * A: https://wiki.php.net/rfc/static_return_type
 * Q: Example of strict_types in interface, abstract class and child class
   * Need to demonstrate exactly where does the declare() need to be executed?
@@ -36,12 +36,15 @@ Examples of OOP
   * If you want to install it, just follow the instructions on the main page
 * See: https://github.com/dbierer/SimpleHtml
   * Examples on how to run it are on the main page
+Previous PHP II class repositories:
+* https://github.com/dbierer/php-ii-jun-2021
+* https://github.com/dbierer/php-ii-mar-2021
 
 ## Class Notes
+* Future directions for the PHP language: https://wiki.php.net/rfc
 * Predefined constants
   * https://www.php.net/manual/en/reserved.constants.php
 * `php.ini` settings: https://www.php.net/manual/en/ini.list.php
-* Future directions for the PHP language: https://wiki.php.net/rfc
 * Searching for a pattern
 ```
 grep -rn /dir/path -e "SEARCH_ITEM"
@@ -50,6 +53,21 @@ grep -rn /dir/path -e "SEARCH_ITEM"
   * See: https://www.php.net/manual/en/language.oop5.late-static-bindings.php
 * Discussion on _numeric strings_
   * See: https://wiki.php.net/rfc/saner-numeric-strings
+* Browser cache / `etag`
+  * Simplified example: https://github.com/dbierer/php-ii-mar-2021/blob/main/example/browser_cache_example.php
+* Email
+  * If using a framework, use its email library
+  * Stand-alone library: https://github.com/PHPMailer/PHPMailer
+  * OOP example using PHPMailer
+    * https://github.com/dbierer/SimpleHtml/blob/main/src/Common/Contact/Email.php
+  * Using PHP `mail()` only:
+    * HTML email: https://github.com/dbierer/classic_php_examples/blob/master/web/email_mail_html.php
+* Regular expressions
+  * Classic examples: https://github.com/dbierer/classic_php_examples/tree/master/regex
+  * Email validation: https://stackoverflow.com/questions/201323/how-can-i-validate-an-email-address-using-a-regular-expression
+  * Online Regex Tester: https://regex101.com/
+* Composer
+  * https://getcomposer.org
 
 ## Q & A
 
