@@ -2,10 +2,16 @@
 
 ## TODO
 * Q: Do you have a link to RFC for return data type of `self`?
+* A: https://wiki.php.net/rfc/static_return_type
 * Q: Example of strict_types in interface, abstract class and child class
   * Need to demonstrate exactly where does the declare() need to be executed?
   * Note: Typo3 uses it in all classes: is this necessary?
+* A: Look at the example `strict_not_strict.php` in this repo
 * Q: Examples of well-structured but easy-to-follow code examples?
+* A: See: https://github.com/mezzio/mezzio-skeleton
+  * If you want to install it, just follow the instructions on the main page
+* A: See: https://github.com/dbierer/SimpleHtml
+  * Examples on how to run it are on the main page
 
 ## Homework
 * For Wed 4 Aug 2021
@@ -26,6 +32,10 @@
 ## Resources
 Examples of OOP
 * See: https://github.com/dbierer/classic_php_examples/tree/master/oop
+* See: https://github.com/mezzio/mezzio-skeleton
+  * If you want to install it, just follow the instructions on the main page
+* See: https://github.com/dbierer/SimpleHtml
+  * Examples on how to run it are on the main page
 
 ## Class Notes
 * Predefined constants
@@ -36,19 +46,16 @@ Examples of OOP
 ```
 grep -rn /dir/path -e "SEARCH_ITEM"
 ```
-
 * Late Static Binding
   * See: https://www.php.net/manual/en/language.oop5.late-static-bindings.php
-  
-## Resources
-* https://github.com/dbierer/classic_php_examples
-* 
+* Discussion on _numeric strings_
+  * See: https://wiki.php.net/rfc/saner-numeric-strings
 
 ## Q & A
 
 * Q: Is there a `php.ini` directive pertaining to nesting level?
-* A: PHP does not impose a limit, however the OS and the CPU will have stack pointer.  
-     This is used to keep track of the current level when dealing with arrays or recursion.  
+* A: PHP does not impose a limit, however the OS and the CPU will have stack pointer.
+     This is used to keep track of the current level when dealing with arrays or recursion.
      Eventually your application will overflow the stack at which point normally a segmentation fault occurs.
 * A: See: https://stackoverflow.com/questions/4293775/increasing-nesting-function-calls-limit
 
@@ -66,7 +73,7 @@ grep -rn /dir/path -e "SEARCH_ITEM"
     * On line 379 note the use of `__call()` to call the default driver instance
 * A: Laravel `Illuminate\Container\Container` uses `__get()` and `__set()` to dynamically access container services
   * See: https://github.com/laravel/framework/blob/master/src/Illuminate/Container/Container.php
-    * Starts on line 1452 
+    * Starts on line 1452
 
 
 ## Errata
