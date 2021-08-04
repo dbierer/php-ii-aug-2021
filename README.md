@@ -14,6 +14,10 @@
   * Examples on how to run it are on the main page
 
 ## Homework
+* For Fri 6 Aug 2021
+  * Lab: Prepared Statements
+  * Lab: Stored Procedure
+  * Lab: Transaction
 * For Wed 4 Aug 2021
   * Lab: Build Custom Exception Class
   * Lab: Traits
@@ -53,6 +57,12 @@ grep -rn /dir/path -e "SEARCH_ITEM"
   * See: https://www.php.net/manual/en/language.oop5.late-static-bindings.php
 * Discussion on _numeric strings_
   * See: https://wiki.php.net/rfc/saner-numeric-strings
+* Common trend: when developing an interface, many developers also define a trait that defines functionality
+  * Example: see: https://github.com/laminas/laminas-db/tree/2.13.x/src/Adapter
+  * Look at `AdapterAwareInterface` and `AdapterAwareTrait`
+* PDO examples
+  * See: https://github.com/dbierer/classic_php_examples/tree/master/db
+  * To find the exact syntax for any given database, look for the `DSN` reference in the set of Drivers
 * Browser cache / `etag`
   * Simplified example: https://github.com/dbierer/php-ii-mar-2021/blob/main/example/browser_cache_example.php
 * Email
@@ -97,3 +107,11 @@ grep -rn /dir/path -e "SEARCH_ITEM"
 ## Errata
 * http://localhost:9999/#/2/45: "Final Declaration"
   * should be: "class GuestUser extends UserEntity"
+* ETag Header Example: need to change line 21 from:
+```
+header(" ETag : $etag ");
+```
+  * to this:
+```
+header("ETag : $etag ");
+```
