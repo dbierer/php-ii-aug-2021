@@ -1,0 +1,20 @@
+<?php
+$xw = new XMLWriter();
+$xw->openMemory();
+$xw->startDocument("1.0");
+$xw->startElement("main");
+$xw->startElement("book");
+$xw->text("War and Peace");
+$xw->startElement("author");
+$xw->text("Tolstoy");
+$xw->endElement();
+$xw->endElement();
+$xw->startElement("book");
+$xw->text("Tarzan");
+$xw->startElement("author");
+$xw->text("Burroughs");
+$xw->endElement();
+$xw->endElement();
+$xw->endElement();
+$xw->endDocument();
+echo $xw->outputMemory();

@@ -1,23 +1,13 @@
 # PHP-II Aug 2021
 
 ## TODO
-* Q: Do you have a link to RFC for return data type of `static`?
-* A: https://wiki.php.net/rfc/static_return_type
-* Q: Example of strict_types in interface, abstract class and child class
-  * Need to demonstrate exactly where does the declare() need to be executed?
-  * Note: Typo3 uses it in all classes: is this necessary?
-* A: Look at the example `strict_not_strict.php` in this repo
-* Q: Examples of well-structured but easy-to-follow code examples?
-* A: See: https://github.com/mezzio/mezzio-skeleton
-  * If you want to install it, just follow the instructions on the main page
-* A: See: https://github.com/dbierer/SimpleHtml
-  * Examples on how to run it are on the main page
 
 ## Homework
 * For Fri 6 Aug 2021
   * Lab: Prepared Statements
   * Lab: Stored Procedure
   * Lab: Transaction
+  * Lab: Validate an Email Address
 * For Wed 4 Aug 2021
   * Lab: Build Custom Exception Class
   * Lab: Traits
@@ -78,8 +68,46 @@ grep -rn /dir/path -e "SEARCH_ITEM"
   * Online Regex Tester: https://regex101.com/
 * Composer
   * https://getcomposer.org
+  * https://packagist.org		<-- Primary packaging system for 300,000+ PHP packages
+  * https://wpackagist.org/		<-- WordPress Packagist
+  * For PHP 8 and 8.1 you might need to add the `--ignore-platform-reqs` option
+* REST Client
+  * Using PHP Streams
+    * https://github.com/dbierer/PHP-8-Programming-Tips-Tricks-and-Best-Practices/blob/main/ch12/src/Chat/Http/Client.php
+  * Using cURL
+    * https://github.com/dbierer/classic_php_examples/blob/master/web/curl.php
+* PHPUnit
+  * phpunit.xml: https://github.com/dbierer/PHP-8-Programming-Tips-Tricks-and-Best-Practices/blob/main/ch12/phpunit.xml
+  * Tests:
+    * See: https://github.com/dbierer/PHP-8-Programming-Tips-Tricks-and-Best-Practices/tree/main/ch12
+    * Look in the `tests` directory
+* PHP Documenter Project: https://phpdoc.org/
 
 ## Q & A
+
+* Q: Find the "official" email regex
+* A: Official Regex: https://www.ietf.org/rfc/rfc5322.txt
+* A: Email validation: https://stackoverflow.com/questions/201323/how-can-i-validate-an-email-address-using-a-regular-expression
+* A: Online Regex Tester: https://regex101.com/
+
+* Q: Example of `preg_replace_callback_array`?
+* A: See: https://github.com/dbierer/php7cookbook/blob/master/source/chapter01/chap_01_php5_to_php7_code_converter.php
+* A: See: https://github.com/dbierer/php7cookbook/blob/master/source/Application/Parse/Convert.php
+
+* Q: Do you have a link to RFC for return data type of `static`?
+* A: https://wiki.php.net/rfc/static_return_type
+
+* Q: Example of strict_types in interface, abstract class and child class
+  * Need to demonstrate exactly where does the declare() need to be executed?
+  * Note: Typo3 uses it in all classes: is this necessary? (Ans: No)
+* A: Look at the example `strict_not_strict.php` in this repo
+* A: You only need to add `declare(strict_types=1)` in the class of which you are creating an instance
+
+* Q: Examples of well-structured but easy-to-follow code examples?
+* A: See: https://github.com/mezzio/mezzio-skeleton
+  * If you want to install it, just follow the instructions on the main page
+* A: See: https://github.com/dbierer/SimpleHtml
+  * Examples on how to run it are on the main page
 
 * Q: Is there a `php.ini` directive pertaining to nesting level?
 * A: PHP does not impose a limit, however the OS and the CPU will have stack pointer.
@@ -115,3 +143,5 @@ header(" ETag : $etag ");
 ```
 header("ETag : $etag ");
 ```
+* file_get_contents() REST Example
+  * last line should be `$response`
